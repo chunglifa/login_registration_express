@@ -1,0 +1,84 @@
+/*CSS reset settings here*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: white;
+    align-content: center;
+    background-color:whitesmoke;
+}
+
+.wrapper{
+    border: 2px solid blue;
+    border-radius: 5px;
+    width: 800px;
+    height: 450px;
+    margin: auto;
+    background-image: url("background.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.formwrapper{
+    height: 495 px;
+    width: 300px;
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+.formwrapper2{
+    height: 300 px;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 50px;
+    display: inline-block;
+    vertical-align: top;
+}
+h1{
+    color: rgb(203, 203, 203);
+    font-style: italic;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h3{
+    text-align: center;
+    color: lightgray;
+}
+h4{
+    color: rgb(45, 41, 41);
+}
+p{
+    text-align: center;
+    color: lightgray;
+}
+form input{
+    width: 300px;
+    height: 30px;
+    margin: 5px;
+    background-color: lightcyan;
+    border-radius: 5px;
+}
+.quoteBox{
+    border-bottom: 1px solid black;
+    margin: 20px;
+}
+
+.message{
+    background-color: yellow;
+    width: 203px;
+    height: 100px;
+    display: inline-block;
+    margin-top: 200px;
+    margin-left: -140px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.message p{
+    color: black;
+    font-style: italic;
+    font-size: 16px;
+}
+
+
+

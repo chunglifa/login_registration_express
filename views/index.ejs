@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <script></script>
+        <title>Form Test Index</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Login and Registration</h1>
+            <div class="formwrapper">
+                <h3>Register</h3>
+                <form action='/registration' method='POST'>
+                    <input id='f_name' type="text" name="f_name" placeholder="First Name">
+                    <br>
+                    <input id='l_name' type="text" name="l_name" placeholder="Last Name">
+                    <input id='email' type="text" name="email" placeholder="Email">
+                    <br>
+                    <input id="pwd" type="password" name="pwd" placeholder="Password">
+                    <br>
+                    <input id="pwd_check" type="password" name="password" placeholder="Re-Enter Password">
+                    <br>
+                    <p>Birthdate:</p>
+                    <input type="date" name="birthdate" placeholder="Birthdate">
+                    <br>
+                <input id='button' type="submit" value="Sign Up!">
+                </form>
+            </div>
+            <div class="formwrapper2">
+                <h4>Login</h4>
+                <form action='/login' method='POST'>
+                    <input id='email' type="text" name="email" placeholder="Email">
+                    <br>
+                    <input id="pwd" type="password" name="pwd" placeholder="Password">
+                    <br>
+                <input id='button' type="submit" value="Sign In">
+                </form>
+            </div>
+                    <% if(messages.login) { %>
+                        <% for (var x of messages.login) { %>
+                        <div class="message">
+                        <p><%= x%></p>
+                        </div>
+                        <% } %>
+                    <% } %>
+                    <% if(messages.registration) { %>
+                        <div class="message">
+                        <% for (var x of messages.registration) { %>
+                        <p><%= x%></p>
+                        <% } %>
+                        </div>
+                    <% } %>
+        </div>
+
+    </body>
+</html>
