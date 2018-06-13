@@ -74,18 +74,27 @@ app.get('/', function(req, res) {
 
 app.get('/success', function(req, res) {
     console.log('LOAD SUCCESS PAGE');
-    console.log(req.session.email);
-    var user;
-    User.findOne({email:req.session.email}, (err,user)=>{
-        if(err){
-            console.log('Error importing user')
-        }
-        else{
-            user=user
-            console.log(user);
-        }
-        res.render('success', {user:user});
-    })
+    if(req.session.email){
+        console.log(req.session.email);
+        var user;
+        User.findOne({email:req.session.email}, (err,user)=>{
+            if(err){
+                console.log('Error importing user')
+            }
+            else{
+                user=user
+                console.log(user);
+            }
+            res.render('success', {user:user});
+        })
+    }
+    else{
+        console.log('Login to see success');
+        req.flash('registration', 'Success only comes to those who REGISTER FIRST.');
+        req.flash('registration', '凸( ͡° ͜ʖ ͡°)');
+        res.redirect('/')
+    }
+    
     
 })
 app.get("/logout", function(req, res) {
